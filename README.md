@@ -1,5 +1,5 @@
 # Trimer
-Trimmer is a url shortner API
+Trimmer is a url shortener API
 
 # Stack
 - Node Js
