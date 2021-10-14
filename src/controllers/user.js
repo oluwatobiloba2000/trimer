@@ -1,12 +1,12 @@
 import { validateId } from '../middleware/url.validate';
 import { getLinksForUser, getUserById } from '../repo/user';
-import { NOT_FOUND, OK, SERVER_ERROR } from '../utils/http-constants';
+import { NOT_FOUND, OK, SERVER_ERROR, BAD_REQUEST} from '../utils/http-constants';
 import { error, success } from '../utils/http-response';
 
 class User {
 
     static async getAllLinksForUser(req, res) {
-        const { userId } = req.user;
+        const { user: userId } = req.user;
         try {
             const { error: validationError } = validateId({id: userId});
     
